@@ -31,6 +31,7 @@ repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
 epel-release
 expect
 git
+net-tools
 nfs-utils
 nmap
 ntp
