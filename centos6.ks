@@ -27,6 +27,7 @@ logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
 %packages
+@core
 epel-release
 expect
 git
@@ -41,5 +42,7 @@ strace
 subversion
 tcpdump
 %end
+
 %post
 yum -y update
+%end
