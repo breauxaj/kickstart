@@ -40,6 +40,6 @@ screen
 strace
 subversion
 tcpdump
+%end
 %post
 yum -y update
-%end
