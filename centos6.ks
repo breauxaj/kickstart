@@ -26,6 +26,7 @@ logvol /opt --vgname=vg_root --size=2048 --name=lv_opt
 logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
+repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com
 %packages
 @core
 epel-release
@@ -34,6 +35,8 @@ git
 nfs-utils
 nmap
 ntp
+puppet
+puppetlabs-release-el-6
 redhat-lsb
 ruby
 rubygems
