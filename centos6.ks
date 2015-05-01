@@ -36,7 +36,7 @@ nfs-utils
 nmap
 ntp
 puppet
-puppetlabs-release-el-6
+puppetlabs-release-el-6-11
 redhat-lsb
 ruby
 rubygems
