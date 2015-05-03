@@ -35,12 +35,15 @@ git
 nfs-utils
 nmap
 ntp
+oddjob
+oddjob-mkhomedir
 puppet
 puppetlabs-release-6-11
 redhat-lsb
 ruby
 rubygems
 screen
+sssd
 strace
 subversion
 tcpdump
