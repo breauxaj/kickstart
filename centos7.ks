@@ -38,7 +38,7 @@ ntp
 oddjob
 oddjob-mkhomedir
 puppet
-puppetlabs-release-6-11
+puppetlabs-release-7-11
 redhat-lsb
 ruby
 ruby-devel
