@@ -29,6 +29,7 @@ repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 %packages
 @core
+docker-io
 epel-release
 expect
 git
