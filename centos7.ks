@@ -53,4 +53,6 @@ tcpdump
 
 %post
 yum -y update
+yum clean all
+rm -rf /var/cache/*
 %end
