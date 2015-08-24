@@ -49,6 +49,7 @@ sssd
 strace
 subversion
 tcpdump
+yum-utils
 %end
 
 %post
