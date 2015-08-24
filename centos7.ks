@@ -33,6 +33,7 @@ docker
 epel-release
 expect
 git
+net-tools
 nfs-utils
 nmap
 ntp
