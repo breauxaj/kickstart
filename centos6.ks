@@ -49,10 +49,13 @@ sssd
 strace
 subversion
 tcpdump
+yum-utils
 %end
 
 %post
 yum -y update
 yum clean all
 rm -rf /var/cache/*
+rm -f /etc/udev/rules.d/70*
+sed -i ‘/^(HWADDR|UUID)=/d’ /etc/sysconfig/network-scripts/ifcfg-eth0
 %end
