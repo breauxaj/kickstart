@@ -28,7 +28,19 @@ logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 %packages --nobase --excludedocs
-@core
+@core --nodefaults
+-aic94xx-firmware*
+-alsa-*
+-biosdevname
+-btrfs-progs*
+-dracut-network
+-iprutils
+-ivtv*
+-iwl*firmware
+-libertas-*-firmware
+-kexec-tools
+-NetworkManager*
+-plymouth*
 docker
 epel-release
 expect
