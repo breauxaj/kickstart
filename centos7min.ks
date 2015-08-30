@@ -37,7 +37,7 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 -iprutils
 -ivtv*
 -iwl*firmware
--libertas-*-firmware
+-libertas*
 -kexec-tools
 -NetworkManager*
 -plymouth*
