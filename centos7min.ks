@@ -41,7 +41,6 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 -kexec-tools
 -NetworkManager*
 -plymouth*
-docker
 epel-release
 expect
 git

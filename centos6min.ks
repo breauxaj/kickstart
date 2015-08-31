@@ -46,7 +46,6 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 -ql*-firmware*
 -xorg-x11-drv-ati-firmware-*
 -zd*-firmware*
-docker-io
 epel-release
 expect
 git
