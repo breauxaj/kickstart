@@ -41,6 +41,7 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 -iwl*firmware
 -kexec-tools
 -libertas-*-firmware
+-plymouth*
 -rt*-firmware*
 -ql*-firmware*
 -xorg-x11-drv-ati-firmware-*
