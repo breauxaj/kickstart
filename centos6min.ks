@@ -29,16 +29,22 @@ repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 %packages --nobase --excludedocs
 @core
+-abrt*
 -aic94xx-firmware*
 -alsa-*
+-atmel-firmware-*
+-bfa-firmware-*
 -btrfs-progs*
 -cups*
+-dovecot*
+-ipw2100-firmware-*
 -ivtv*
 -iwl*firmware
 -kexec-tools
 -libertas-*-firmware
 -ModemManager*
 -NetworkManager*
+-ql*-firmware*
 -wpa_supplicant*
 docker-io
 epel-release
