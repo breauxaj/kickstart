@@ -32,6 +32,7 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 -aic94xx-firmware*
 -alsa-*
 -btrfs-progs*
+-cups*
 -ivtv*
 -iwl*firmware
 -kexec-tools
