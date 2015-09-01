@@ -27,6 +27,7 @@ logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
+repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/6
 %packages --nobase --excludedocs
 @core
 -abrt*
@@ -46,6 +47,7 @@ repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
 -ql*-firmware*
 -xorg-x11-drv-ati-firmware-*
 -zd*-firmware*
+docker-engine
 epel-release
 expect
 git
