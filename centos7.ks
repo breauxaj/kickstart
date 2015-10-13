@@ -63,6 +63,7 @@ sssd
 strace
 subversion
 tcpdump
+yum-cron
 yum-utils
 %end
 
