@@ -26,6 +26,7 @@ logvol /opt --vgname=vg_root --size=2048 --name=lv_opt
 logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
+repo --name=RepoForge --baseurl=http://apt.sw.be/redhat/el7/en/x86_64/rpmforge/
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/7
 %packages --nobase --excludedocs
@@ -55,6 +56,7 @@ oddjob-mkhomedir
 puppet
 puppetlabs-release-7-11
 redhat-lsb
+rpmforge-release
 ruby
 ruby-devel
 rubygems
