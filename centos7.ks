@@ -43,6 +43,7 @@ repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/7
 -kexec-tools
 -NetworkManager*
 -plymouth*
+augtool
 docker-engine
 epel-release
 expect

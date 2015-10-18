@@ -48,6 +48,7 @@ repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/6
 -ql*-firmware*
 -xorg-x11-drv-ati-firmware-*
 -zd*-firmware*
+augtool
 docker-engine
 epel-release
 expect
