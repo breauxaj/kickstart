@@ -28,7 +28,6 @@ logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/7
-repo --name=IUS --baseurl=https://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64
 %packages --nobase --excludedocs
 @core --nodefaults
 -aic94xx-firmware*
@@ -48,7 +47,6 @@ docker-engine
 epel-release
 expect
 git
-ius-release
 net-tools
 nfs-utils
 nmap
