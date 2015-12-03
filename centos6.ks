@@ -42,6 +42,7 @@ repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/6
 -iwl*firmware
 -kexec-tools
 -libertas-*-firmware
+-mysql56u*
 -plymouth*
 -rt*-firmware*
 -ql*-firmware*
@@ -73,6 +74,8 @@ yum-utils
 
 %post
 yum -y update
+rpm -ivh https://centos6.iuscommunity.org/ius-release.rpm
+yum history sync
 yum clean all
 rm -rf /var/cache/yum/*
 rm -f /etc/udev/rules.d/70*
