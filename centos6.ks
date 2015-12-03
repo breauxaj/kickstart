@@ -43,7 +43,7 @@ repo --name=IUS --baseurl=https://dl.iuscommunity.org/pub/ius/stable/CentOS/6/x8
 -iwl*firmware
 -kexec-tools
 -libertas-*-firmware
--mysql56u-libs
+-mysql56u-*
 -plymouth*
 -rt*-firmware*
 -ql*-firmware*
