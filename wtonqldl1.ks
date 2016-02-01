@@ -1,9 +1,10 @@
 install
 text
-url --url http://mirror.rackspace.com/CentOS/7/os/x86_64/
+url --url http://mirror.rackspace.com/CentOS/6/os/x86_64/
 lang en_US.UTF-8
 keyboard us
-network --device eth0 --bootproto dhcp --noipv6
+#network --device eth0 --bootproto dhcp --noipv6
+network --device eth0 --bootproto static --ip 10.18.52.15 --netmask 255.255.255.0 --gateway 10.18.52.254 --nameserver 159.14.3.10,159.14.27.2 --hostname wtonqldl1
 rootpw changeme
 firstboot --disable
 authconfig --enableshadow --passalgo=sha512
@@ -11,7 +12,7 @@ selinux --permissive
 # adjust to your timezone
 timezone America/New_York
 # disk configuration, vmware options appended
-bootloader --location=mbr --driveorder=sda --append="crashkernel=128M vga=788 elevator=noop ifnames=0 biosdevname=0"
+bootloader --location=mbr --driveorder=sda --append="crashkernel=128M vga=788 elevator=noop"
 clearpart --all --initlabel
 zerombr
 part /boot --fstype ext3 --size=256
@@ -25,36 +26,41 @@ logvol /tmp --vgname=vg_root --size=2048 --name=lv_tmp
 logvol /opt --vgname=vg_root --size=2048 --name=lv_opt
 logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
-repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
-repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
-repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/7
+repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/6/x86_64
+repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/6/products/x86_64/
+#repo --name=Docker --baseurl=https://yum.dockerproject.org/repo/main/centos/6
 %packages --nobase --excludedocs
-@core --nodefaults
+@core
+-abrt*
 -aic94xx-firmware*
 -alsa-*
--biosdevname
+-atmel-firmware-*
+-bfa-firmware-*
 -btrfs-progs*
--dracut-network
--iprutils
+-cups*
+-ipw2100-firmware-*
 -ivtv*
 -iwl*firmware
--libertas*
 -kexec-tools
--NetworkManager*
+-libertas-*-firmware
+-mysql56u*
 -plymouth*
+-rt*-firmware*
+-ql*-firmware*
+-xorg-x11-drv-ati-firmware-*
+-zd*-firmware*
 augeas
-docker-engine
+#docker-engine
 epel-release
 expect
 git
-net-tools
 nfs-utils
 nmap
 ntp
 oddjob
 oddjob-mkhomedir
 puppet
-puppetlabs-release-7-11
+puppetlabs-release-6-11
 redhat-lsb
 ruby
 ruby-devel
@@ -64,14 +70,14 @@ sssd
 strace
 subversion
 tcpdump
-yum-cron
 yum-utils
 %end
 
 %post
 yum -y update
-rpm -ivh https://centos7.iuscommunity.org/ius-release.rpm
 yum history sync
 yum clean all
-rm -rf /var/cache/*
+rm -rf /var/cache/yum/*
+rm -f /etc/udev/rules.d/70*
+sed -i '/^(HWADDR|UUID)=/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 %end
