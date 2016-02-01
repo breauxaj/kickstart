@@ -11,7 +11,7 @@ selinux --permissive
 # adjust to your timezone
 timezone America/New_York
 # disk configuration, vmware options appended
-bootloader --location=mbr --driveorder=sda --append="crashkernel=128M vga=788 elevator=noop"
+bootloader --location=mbr --driveorder=sda --append="crashkernel=128M vga=788 elevator=noop ifnames=0 biosdevname=0"
 clearpart --all --initlabel
 zerombr
 part /boot --fstype ext3 --size=256
