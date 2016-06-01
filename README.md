@@ -19,3 +19,9 @@ For CentOS 7:
 ```
 noverifyssl ks=https://raw.githubusercontent.com/breauxaj/kickstart/master/centos7.ks
 ```
+
+For Oracle 7:
+
+```
+noverifyssl ks=https://raw.githubusercontent.com/breauxaj/kickstart/master/oracle7.ks
+```
