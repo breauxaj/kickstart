@@ -70,8 +70,9 @@ yum-utils
 
 %post
 yum -y update
-rpm -ivh https://centos7.iuscommunity.org/ius-release.rpm
 yum history sync
 yum clean all
 rm -rf /var/cache/*
+mv /etc/sysconfig/network-scripts/ifcfg-enp0s3 /etc/sysconfig/network-scripts/ifcfg-eth0
+sed -i 's/enp0s3/eth0/g' /etc/sysconfig/network-scripts/ifcfg-eth0
 %end
