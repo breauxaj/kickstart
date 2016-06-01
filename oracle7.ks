@@ -57,14 +57,12 @@ puppet
 puppetlabs-release-7-11
 redhat-lsb
 ruby
-#ruby-devel
 rubygems
 screen
 sssd
 strace
 subversion
 tcpdump
-#yum-cron
 yum-utils
 %end
 
