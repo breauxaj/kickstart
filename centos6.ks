@@ -74,7 +74,6 @@ yum-utils
 
 %post
 yum -y update
-rpm -ivh https://centos6.iuscommunity.org/ius-release.rpm
 yum history sync
 yum clean all
 rm -rf /var/cache/yum/*
