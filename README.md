@@ -25,3 +25,15 @@ For Oracle 7:
 ```
 noverifyssl ks=https://raw.githubusercontent.com/breauxaj/kickstart/master/oracle7.ks
 ```
+
+For Scientific 6:
+
+```
+noverifyssl ks=https://raw.githubusercontent.com/breauxaj/kickstart/master/scientific6.ks
+```
+
+For Scientific 7:
+
+```
+noverifyssl ks=https://raw.githubusercontent.com/breauxaj/kickstart/master/scientific7.ks
+```
