@@ -55,7 +55,7 @@ puppet
 puppetlabs-release-7-11
 redhat-lsb
 ruby
-ruby-devel
+#ruby-devel
 rubygems
 screen
 sssd
