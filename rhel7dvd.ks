@@ -18,13 +18,13 @@ part /boot --fstype ext3 --size=256
 part swap --size=2048
 # lvm configuration
 part pv.01 --size=1 --grow
-volgroup vg_root pv.01
-logvol / --vgname=vg_root --size=2048 --name=lv_root
-logvol /usr --vgname=vg_root --size=4096 --name=lv_usr
-logvol /tmp --vgname=vg_root --size=2048 --name=lv_tmp
-logvol /opt --vgname=vg_root --size=2048 --name=lv_opt
-logvol /home --vgname=vg_root --size=4096 --name=lv_home
-logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
+volgroup rootvg pv.01
+logvol / --vgname=rootvg --size=2048 --name=rootlv
+logvol /usr --vgname=rootvg --size=4096 --name=usrlv
+logvol /tmp --vgname=rootvg --size=2048 --name=tmplv
+logvol /opt --vgname=rootvg --size=2048 --name=optlv
+logvol /home --vgname=rootvg --size=4096 --name=homelv
+logvol /var --vgname=rootvg --size=1 --grow --name=varlv
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
 repo --name=PuppetLabs --baseurl=http://yum.puppetlabs.com/el/7/products/x86_64
 %packages --nobase --excludedocs
@@ -52,10 +52,9 @@ ntp
 oddjob
 oddjob-mkhomedir
 puppet
-puppetlabs-release-7-11
+puppetlabs-release
 redhat-lsb
 ruby
-#ruby-devel
 rubygems
 screen
 sssd
