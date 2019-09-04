@@ -26,7 +26,7 @@ logvol /opt --vgname=vg_root --size=2048 --name=lv_opt
 logvol /home --vgname=vg_root --size=4096 --name=lv_home
 logvol /var --vgname=vg_root --size=1 --grow --name=lv_var
 repo --name=EPEL --baseurl=http://dl.fedoraproject.org/pub/epel/7/x86_64
-repo --name=PuppetLabs --baseurl=https://yum.puppetlabs.com/
+repo --name=PuppetLabs --baseurl=https://yum.puppetlabs.com/puppet5/el/7/x86_64
 %packages --nobase --excludedocs
 @core --nodefaults
 -aic94xx-firmware*
@@ -51,8 +51,8 @@ nmap
 ntp
 oddjob
 oddjob-mkhomedir
-puppet
-puppet-release-el-7
+puppet-agent
+puppet5-release
 redhat-lsb
 ruby
 rubygems
